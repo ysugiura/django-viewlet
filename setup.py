@@ -78,8 +78,12 @@ setup(
     dependency_links=[],
     install_requires=[
         "six",
+        "Django>=3.0,<4.0"  # Specify the appropriate Django version range
     ],
     tests_require=["coverage", "Jinja2"],
+    extras_require={
+        'test': ["coverage", "Jinja2"]
+    },
     test_suite="run_tests.main",
     cmdclass=cmdclasses,
 )
